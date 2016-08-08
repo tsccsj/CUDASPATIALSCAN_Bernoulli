@@ -1,0 +1,1 @@
+# CUDASPATIALSCAN_Bernoulli
