@@ -1,6 +1,8 @@
 #include <stdio.h>
-#include "io.cuh"
-#include "scan.cuh"
+#include <stdlib.h>
+#include <math.h>
+#include "io.h"
+#include "scan.h"
 
 #define NumRadius 100
 #define RadiusIncrement 10000
@@ -31,7 +33,7 @@ int main(int argc, char ** argv)
 
 	if(NULL == (file = fopen("/home/ygao29/cudaScan/data/2014_01_01", "r")))
 	{
-		printf("ERROR: Cannot open your flu points file \n");
+		printf("ERROR: Cannot open input file \n");
 		exit(1);
 	}
 
