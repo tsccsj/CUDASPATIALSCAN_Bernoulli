@@ -95,7 +95,7 @@ __global__ void scanKernel(float * dX, float * dY, int * dI, int nPoints, int * 
 __global__ void scanKernelMC(float * dX, float * dY, int * dI, int nPoints, int * dWC, int * dAbove, int nCol, int nRow, float xMin, float yMax, int cellSize)
 {
 	int x = blockIdx.x * blockDim.x + threadIdx.x;
-    int y = blockIdx.y * blockDim.y + threadIdx.y;
+	int y = blockIdx.y * blockDim.y + threadIdx.y;
 	int idInThread = threadIdx.y * blockDim.x + threadIdx.x;
 	
 	float cellX = xMin + cellSize * (x + 0.5);
